@@ -46,7 +46,36 @@ STATEMENT(\
   * @retval	
   * @return	
   */ 
-  
+
+/**
+ * @brief toggle the led io pin every 500 ms.
+ * 
+ */
+static void led_Control(void)
+{
+  static tick_t timeout = 0;
+
+  if (TickIsTimeout(timeout))
+  {
+    SetTick(timeout, _ms(500));
+    digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
+  }
+}
+
+/**
+ * @brief print the message every 3 sec.
+ * 
+ */
+static void msg_Control(void)
+{
+  static tick_t timeout = 0;
+
+  if (TickIsTimeout(timeout))
+  {
+    SetTick(timeout, _sec(3));
+    DebugMsg("\n@%u hi there!!!", millis());
+  }
+}
 /* Public Function -----------------------------------------------------------*/
 /**
   * @brief	
@@ -64,8 +93,14 @@ void setup() {
 
   DebugMsg("\n\nCompiled @ %s, %s", __DATE__, __TIME__);
   DebugMsg("\nVersion : %s", VERSION);
+
+  /* init the led io pin as output */
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  
+  led_Control();
+  msg_Control();
 }
