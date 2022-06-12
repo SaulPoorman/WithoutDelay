@@ -16,9 +16,6 @@
 #define _COMMON_H_
 
 /* Predefined Or Compiler Option ---------------------------------------------*/
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 /* Includes ------------------------------------------------------------------*/
 #include "./Common/ProjectConfig.h"
@@ -40,9 +37,5 @@ extern "C" {
 /* Public Variable -----------------------------------------------------------*/
 /* Public Class --------------------------------------------------------------*/
 /* Public Function -----------------------------------------------------------*/
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif

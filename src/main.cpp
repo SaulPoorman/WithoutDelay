@@ -59,10 +59,10 @@ STATEMENT(\
 void setup() {
   // put your setup code here, to run once:
 
-  // Serial.begin(921600);
+  Serial.begin(115200);
 
-  // DebugMsg("\n\nCompiled @ %s, %s", __DATE__, __TIME__);
-  // DebugMsg("\nVersion : %s", VERSION);
+  DebugMsg("\n\nCompiled @ %s, %s", __DATE__, __TIME__);
+  DebugMsg("\nVersion : %s", VERSION);
 }
 
 void loop() {
