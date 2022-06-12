@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "tick.h": "c",
+        "arduino.h": "c",
+        "projectconfig.h": "c",
+        "common_macro.h": "c",
+        "version.h": "c",
+        "common.h": "c"
+    }
+}
