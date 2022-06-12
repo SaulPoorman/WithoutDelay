@@ -1,6 +1,6 @@
 /**
  ******************************************************************************
- * @file	: Common.h
+ * @file	: Debug.h
  * @version	: V0.0.1
  * @date	: 2022.06.12
  * @author	: saul.poorman@gmail.com
@@ -12,24 +12,15 @@
  */
 
  /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef _COMMON_H_
-#define _COMMON_H_
+#ifndef _DEBUG_H_
+#define _DEBUG_H_
 
 /* Predefined Or Compiler Option ---------------------------------------------*/
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "./Common/ProjectConfig.h"
-
-#include <Arduino.h>
-
-#include <stdio.h>
-#include <string.h>
-
-#include "./Common/Common_Macro.h"
-#include "./Common/Tick.h"
-#include "./Common/Debug.h"
-#include "Version.h"
-
 /* Hardware Configuration ----------------------------------------------------*/
 /* Define --------------------------------------------------------------------*/
 /* Enum ----------------------------------------------------------------------*/
@@ -38,5 +29,10 @@
 /* Public Variable -----------------------------------------------------------*/
 /* Public Class --------------------------------------------------------------*/
 /* Public Function -----------------------------------------------------------*/
+void Printf_Begin(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
